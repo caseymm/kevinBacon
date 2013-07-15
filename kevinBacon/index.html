@@ -4,60 +4,33 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.27.2"></script>
-    <style type="text/css">
-
-.node circle {
-  cursor: pointer;
-  stroke: #3182bd;
-  stroke-width: 1.5px;
-}
-
-.node text {
-  font: 12px sans-serif;
-  pointer-events: none;
-}
-
-line.link {
-  fill: none;
-  stroke: #9ecae1;
-  stroke-width: 1.5px;
-}
-
-.box{
-    width:40%;
-    height:300px;
-    margin-left: 20%;
-    border: dashed;
-    border-color: red;
-    border-radius: 3px;
-    margin-top:10%;
-    position:absolute;
-    z-index:2;
-    background-color: #fff;
-    opacity: 0.6;
-}
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/tree.css" />
   </head>
   <body>
-    <p>Click on an image to show and hide the connected items.</p>
+    <p>Click on an image to show and hide the connected items and a name to show information about the actor or actress.</p>
     
         
     <div id="chart"></div>
     
-    <div id="hiddenLayer" style="z-index:1; position:absolute; top:0px; left:0px; width:100%;height:1500px;display:none;"></div>
+    <div id="hiddenLayer" style="z-index:1; position:absolute; top:0px; left:0px; width:100%;height:1200px;display:none;"></div>
         
-        <div id="box"></div>
+        <div id="boxHold"></div>
     <script type="text/javascript">
         
 
 $(document).ready(function() {
-    $('#box').hide();
+    $('#boxHold').hide();
     $('#hiddenLayer').hide();
 });
+
+$('#hiddenLayer').click(function(event){
+			
+			$('#boxHold').hide();
+			$('#hiddenLayer').hide();
+		});    
     
-    
-var w = 960,
-    h = 800,
+var w = 600,
+    h = 1200,
     root;
 
 var force = d3.layout.force()
@@ -117,7 +90,7 @@ function update() {
   var nodeEnter = node.enter().append("svg:g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-      .on("click", click)
+      
       .call(force.drag);
 
   /*nodeEnter.append("svg:circle")
@@ -125,20 +98,24 @@ function update() {
       .style("fill", color);*/
   
   node.append("image")
+      .on("click", click)
       .attr("xlink:href", (function(d) { return d.img; }))
       .attr("x", -20)
       .attr("y", -20)
       .attr("width", 40)
       .attr("height", 40);
 
-  node.append("svg:text")
+  nodeEnter.append("svg:text")
       .attr("text-anchor", "middle")
       .attr("dy", "3.5em")
-      .text(function(d) { return d.name; })
-      .on("click", function(d) { alert("Hello world"); });
-      /*$('#box').show()
-      $('#hiddenLayer').show()
-  });*/
+      .on("click", function(d) {
+        console.log("clicking");
+        $('#boxHold').show();
+        $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+' width="100px" height="130px"></img><a href="http://www.imdb.com/name/'+d.imdb+'" target="blank"><div class="personName">' + d.name + '</div></a><p>'+d.info+'</p></div>');
+        $('#hiddenLayer').show();
+  })
+      //.on("click", function(d) { alert("Hello world"); })
+      .text(function(d) { return d.name; });
 
   // Exit any old nodes.
   node.exit().remove();

@@ -1,50 +1,74 @@
-{
- "name": "Georgia Movies",
- "img": "images/peach.png",
+{"name": "Anchorman 2", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "",
+ "children":
+  [
+ {"name": "Vince Vaughn",
+ "img": "images/vaughn.jpg",
+ "info": "Here is some info about this person",
+ "imdb": "nm0000681",
  "children": [
   {
-   "name": "Movie 1",
+   "name": "The Watch",
    "img": "images/reel.png",
     "children": [
-      {"name": "Actor Name", "size": 3938, "img": "images/person1.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person2.png"},
-      {"name": "Actor Name",
-          "size": 3938,
-          "img": "images/person3.png",
-          "children":[    
-            {
-              "name": "Movie 1B",
-              "img": "images/reel.png",
-              "children": [
-               {"name": "Actor Name", "size": 3938, "img": "images/person1.png"},
-               {"name": "Actor Name", "size": 3938, "img": "images/person2.png"},
-               {"name": "Actor Name", "size": 3938, "img": "images/person3.png"}
+      {"name": "Ben Stiller", "size": 3938, "img": "images/stiller.jpg", "info": "Here is some info about this person", "imdb": "nm0001774"},
+      {"name": "Jonah Hill", "size": 3938, "img": "images/hill.jpg", "info": "Here is some info about this person", "imdb": "nm1706767"},
+      {"name": "Richard Ayoade", "size": 3938, "img": "images/ayoade.jpg", "info": "Here is some info about this person", "imdb": "nm1547964"}
+   ]
+  },
+  {
+   "name": "The Internship",
+   "img": "images/reel.png",
+     "children": [
+      {"name": "Owen Wilson", "size": 3938, "img": "images/wilson.jpg", "info": "Here is some info about this person", "imdb": "nm0005562"}
+      ]
+  }
+ ]
+ },
+ {"name": "Christina Applegate", "size": 3938, "img": "images/applegate.jpg", "info": "Here is some info about this person", "imdb": "nm0000775"},
+ {"name": "Paul Rudd", "size": 3938, "img": "images/rudd.jpg", "info": "Here is some info about this person", "imdb": "nm0748620",
+ "children":[
+    {"name": "Wanderlust", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "",
+      "children":[
+        {"name": "Jennifer Aniston", "size": 3938, "img": "images/anniston.png", "info": "Here is some info about this person", "imdb": "nm0000098"}
+    ]}
+ ]
+  },
+  {"name": "Kanye West", "size": 3938, "img": "images/west.jpg", "info": "Here is some info about this person", "imdb": "nm1577190",
+ "children":[
+    {"name": "Kim Kardashian", "size": 3938, "img": "images/kardashian.jpg", "info": "Here is some info about this person", "imdb": "nm2578007",
+      "children":[
+        {"name": "Temptation: Confessions of a Marriage Counselor", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": ""}
+    ]}
+ ]
+  },
+  {"name": "John Goodman", "size": 3938, "img": "images/goodman.jpg", "info": "Here is some info about this person", "imdb": "nm0000422",
+ "children":[
+    {"name": "Argo", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "",
+      "children":[
+        {"name": "Ben Affleck", "size": 3938, "img": "images/affleck.jpg", "info": "Here is some info about this person", "imdb": "nm0000255",
+          "children":[
+            {"name": "Jennifer Garner", "size": 3938, "img": "images/garner.jpg", "info": "Here is some info about this person", "imdb": "nm0004950",
+              "children":[
+                  {"name": "The Odd Life of Timothy Green", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "",
+                    "children":[
+                      {"name": "Joel Edgerton", "size": 3938, "img": "images/edgerton.jpg", "info": "Here is some info about this person", "imdb": "nm0249291",
+                        "children":[
+                            {"name": "Lawless", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "",
+                              "children":[
+                                  {"name": "Jason Clarke", "size": 3938, "img": "images/.jpg", "info": "Here is some info about this person", "imdb": "nm0164809"},
+                                  {"name": "Jessica Chastain", "size": 3938, "img": "images/chastain.jpg", "info": "Here is some info about this person", "imdb": "nm1567113"}  
+                              ]
+                            }
+                        ]
+                      }
+                    ]
+                  }
               ]
-             }
-             ]
-    }
-   ]
-  },
-  {
-   "name": "Movie 2",
-   "img": "images/reel.png",
-     "children": [
-      {"name": "Actor Name", "size": 3938, "img": "images/person1.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person2.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person3.png"}
-   ]
-  },
-  {
-   "name": "Movie 3",
-   "img": "images/reel.png",
-     "children": [
-      {"name": "Actor Name", "size": 3938, "img": "images/person1.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person2.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person3.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person1.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person2.png"},
-      {"name": "Actor Name", "size": 3938, "img": "images/person3.png"}
-    ]
+            }
+          ]
+        }
+    ]}
+ ]
   }
  ]
 }
