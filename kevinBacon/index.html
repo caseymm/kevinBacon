@@ -10,11 +10,11 @@
     <p>Click on an image to show and hide the connected items and a name to show information about the actor or actress.</p>
     
         
-    <div id="chart"></div>
+    <div class="contain" id="chart"></div>
     
     <div id="hiddenLayer" style="z-index:1; position:absolute; top:0px; left:0px; width:100%;height:1200px;display:none;"></div>
         
-        <div id="boxHold"></div>
+        <div class="contain" id="boxHold"></div>
     <script type="text/javascript">
         
 
@@ -35,7 +35,7 @@ var w = 600,
 
 var force = d3.layout.force()
     .linkDistance(100)
-    .charge(-150)
+    .charge(-200)
     .gravity(.03)
     .size([w, h]);
 
@@ -102,16 +102,17 @@ function update() {
       .attr("xlink:href", (function(d) { return d.img; }))
       .attr("x", -20)
       .attr("y", -20)
-      .attr("width", 40)
-      .attr("height", 40);
+      .attr("width", 50)
+      .attr("height", 50);
 
   nodeEnter.append("svg:text")
       .attr("text-anchor", "middle")
+      .attr("dx", "5px")
       .attr("dy", "3.5em")
       .on("click", function(d) {
         console.log("clicking");
         $('#boxHold').show();
-        $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+' width="100px" height="130px"></img><a href="http://www.imdb.com/name/'+d.imdb+'" target="blank"><div class="personName">' + d.name + '</div></a><p>'+d.info+'</p></div>');
+        $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+'></img><a href="http://www.imdb.com/name/'+d.imdb+'" target="blank"><div class="personName">' + d.name + '</div></a><p>'+d.info+'</p></div>');
         $('#hiddenLayer').show();
   })
       //.on("click", function(d) { alert("Hello world"); })

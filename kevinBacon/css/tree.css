@@ -4,46 +4,63 @@ body{
     color: #000;
 }
 
-.personName{
-    font-size: 20px;
-    margin-top: 2px;
+a{
+    text-decoration:none;
 }
 
-.node circle {
+.contain{
+    width:600px;
+    margin:auto;
+    position:relative;
+}
+
+.personName{
+    font-size: 26px;
+    margin-top: 2px;
+    color: #AB0202;
+    text-decoration: none;
+}
+
+.node {
   cursor: pointer;
   stroke: #3182bd;
-  stroke-width: 1.5px;
+  stroke-width: 0px;
+  text-decoration: none;
 }
 
 .node text {
   font: 12px sans-serif;
   /*pointer-events: none;*/
+  cursor: pointer;
 }
 
 line.link {
   fill: none;
-  stroke: #9ecae1;
-  stroke-width: 1.5px;
+  stroke: #C4C2C2;
+  stroke-width: 1px;
 }
 
 .box{
-    width:40%;
+    width:500px;
     height:300px;
-    margin-left: 20%;
+    margin-left:47px;
     border: solid;
-    border-color: #000;
-    border-width:3px;
+    border-color: #C4C2C2;
+    border-width:1px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
-    margin-top:-650px;
+    margin-top:-1050px;
     position:absolute;
     z-index:2;
     background-color: #fff;
-    padding:5px;
+    padding:15px;
+   /* -webkit-box-shadow:  5px 6px 10px 3px rgba(0, 0, 0, 0.4);
+    box-shadow:  5px 6px 10px 3px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow:  5px 6px 10px 3px rgba(0, 0, 0, 0.4);*/
 }
 
 .profile{
     float:left;
-    margin-right: 5px;
+    margin-right: 15px;
 }
