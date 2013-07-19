@@ -19,7 +19,36 @@
    "name": "The Internship",
    "img": "images/reel.png",
      "children": [
-      {"name": "Owen Wilson", "size": 3938, "img": "images/wilson.jpg", "info": "Here is some info about this person", "imdb": "nm0005562"}
+      {"name": "Owen Wilson", "size": 3938, "img": "images/wilson.jpg", "info": "Here is some info about this person", "imdb": "nm0005562"},
+      {"name": "John Goodman", "size": 3938, "img": "images/goodman.jpg", "info": "Here is some info about this person", "imdb": "nm0000422",
+        "children":[
+           {"name": "Argo", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1024648",
+             "children":[
+               {"name": "Ben Affleck", "size": 3938, "img": "images/affleck.jpg", "info": "Here is some info about this person", "imdb": "nm0000255",
+                 "children":[
+                   {"name": "Jennifer Garner", "size": 3938, "img": "images/garner.jpg", "info": "Here is some info about this person", "imdb": "nm0004950",
+                     "children":[
+                         {"name": "The Odd Life of Timothy Green", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1462769",
+                           "children":[
+                             {"name": "Joel Edgerton", "size": 3938, "img": "images/edgerton.jpg", "info": "Here is some info about this person", "imdb": "nm0249291",
+                               "children":[
+                                   {"name": "Lawless", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1212450",
+                                     "children":[
+                                         {"name": "Jason Clarke", "size": 3938, "img": "images/clarke.jpg", "info": "Here is some info about this person", "imdb": "nm0164809"},
+                                         {"name": "Jessica Chastain", "size": 3938, "img": "images/chastain.jpg", "info": "Here is some info about this person", "imdb": "nm1567113"}  
+                                     ]
+                                   }
+                               ]
+                             }
+                           ]
+                         }
+                     ]
+                   }
+                 ]
+               }
+           ]}
+        ]
+         }
       ]
   }
  ]
@@ -43,35 +72,7 @@
         }
     ]}
  ]
-  },
-  {"name": "John Goodman", "size": 3938, "img": "images/goodman.jpg", "info": "Here is some info about this person", "imdb": "nm0000422",
- "children":[
-    {"name": "Argo", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1024648",
-      "children":[
-        {"name": "Ben Affleck", "size": 3938, "img": "images/affleck.jpg", "info": "Here is some info about this person", "imdb": "nm0000255",
-          "children":[
-            {"name": "Jennifer Garner", "size": 3938, "img": "images/garner.jpg", "info": "Here is some info about this person", "imdb": "nm0004950",
-              "children":[
-                  {"name": "The Odd Life of Timothy Green", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1462769",
-                    "children":[
-                      {"name": "Joel Edgerton", "size": 3938, "img": "images/edgerton.jpg", "info": "Here is some info about this person", "imdb": "nm0249291",
-                        "children":[
-                            {"name": "Lawless", "size": 3938, "img": "images/reel.png", "info": "Here is some info about this person", "imdb": "tt1212450",
-                              "children":[
-                                  {"name": "Jason Clarke", "size": 3938, "img": "images/.jpg", "info": "Here is some info about this person", "imdb": "nm0164809"},
-                                  {"name": "Jessica Chastain", "size": 3938, "img": "images/chastain.jpg", "info": "Here is some info about this person", "imdb": "nm1567113"}  
-                              ]
-                            }
-                        ]
-                      }
-                    ]
-                  }
-              ]
-            }
-          ]
-        }
-    ]}
- ]
   }
+  
  ]
 }
