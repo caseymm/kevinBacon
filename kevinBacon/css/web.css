@@ -8,23 +8,29 @@ a{
     text-decoration:none;
 }
 
+@font-face {
+	font-family: benthem;
+	src:url(../fonts/Benthem-Bold.otf)	
+}
+
 .contain{
     width:600px;
     margin:auto;
     position:relative;
 }
 
-.personName{
-    font-size: 26px;
-    margin-top: 2px;
-    color: #AB0202;
-    text-decoration: none;
-}
-
 .personName a{
     font-size: 26px;
     margin-top: 2px;
     color: #AB0202;
+    text-decoration: none;
+    font-family: 'benthem';
+}
+
+.personName a:hover{
+    font-size: 26px;
+    margin-top: -7px;
+    color: #D9AD00;
     text-decoration: none;
 }
 
