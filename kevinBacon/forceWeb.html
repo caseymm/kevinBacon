@@ -15,6 +15,16 @@
     
     <div id="hiddenLayer" style="z-index:1; position:absolute; top:0px; left:0px; width:100%;height:1200px;display:none;"></div>
     <div class="contain">
+        <div id="permanent">
+            <div id="count">
+                <div class="six">6<div class="small">&#186;</div></div>
+            </div>
+            <div class="permText">
+                <div class="separation">OF SEPARATION</div>
+                <div class="georgia">Georgia <i>style</i></div>
+            </div>
+        </div>
+        
         <div id="boxShadow"><span id="close">x</span></div>
     </div>
         
@@ -24,14 +34,15 @@
 $(document).ready(function() {
     $('#boxHold').hide();
     $('#hiddenLayer').hide();
-    $('#boxShadow').hide();
+    $('#close').hide();
 });
 
 $('#hiddenLayer').click(function(event){
 			
 			$('#hiddenLayer').hide();
                         $('#boxHold').hide();
-                        $('#boxShadow').hide();
+                        $('#close').hide();
+                        
 
 		});
 
@@ -39,7 +50,7 @@ $('#close').click(function(event){
 			
 			$('#hiddenLayer').hide();
                         $('#boxHold').hide();
-                        $('#boxShadow').hide();
+                        $('#close').hide();
 
 		});                 
     
@@ -77,9 +88,9 @@ d3.json("data/movies.json", function(json) {
       .on("click", function(d) {
         console.log("clicking");
         $('#boxHold').show();
-        $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+'></img><div class="personName"><a href="http://www.imdb.com/'+d.imdb+'" target="blank">' + d.name + '</a></div><p>'+d.info+'</p></div>');
+        $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+'></img><div class="personName"><a href="http://www.imdb.com/'+d.imdb+'" target="blank">' + d.name + '</a></div><div class="filmText">'+d.info+'</div></div>');
         $('#hiddenLayer').show();
-        $('#boxShadow').show();
+        $('#close').show();
   })
       .attr("xlink:href", (function(d) { return d.img; }))
       .attr("x", -20)
