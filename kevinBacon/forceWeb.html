@@ -8,9 +8,13 @@
 
 <body>
 
-<p>Click on an image to show information about the actor, actress, or movie.</p>
+<p>The film industry is booming in Georgia. Over the past few years, many actors and actresses have been in and around big and small towns in Georgia
+racking up screen time. The web below connects actors, actresses, and movies that have ties to Georgia and presents them in relationship to "Anchorman 2."
+    Click on an image of an actor, actress, or film in the web below to view information about that person or film.</p>
     
-        
+    <div id="left"></div>
+    
+    <div id="middle">   
     <div class="contain" id="chart"></div>
     
     <div id="hiddenLayer" style="z-index:1; position:absolute; top:0px; left:0px; width:100%;height:1200px;display:none;"></div>
@@ -29,7 +33,8 @@
     </div>
         
         <div class="contain" id="boxHold"></div>
-
+    </div>
+    <div id="right"></div>
 <script>
 $(document).ready(function() {
     $('#boxHold').hide();
