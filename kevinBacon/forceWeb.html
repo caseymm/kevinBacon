@@ -21,7 +21,7 @@
             </div>
             <div class="permText">
                 <div class="separation">OF SEPARATION</div>
-                <div class="georgia">Georgia <i>style</i></div>
+                <div class="georgia">Georgia <span class="style"><i>style</i></span></div>
             </div>
         </div>
         
@@ -86,10 +86,9 @@ d3.json("data/movies.json", function(json) {
 
   node.append("image")
       .on("click", function(d) {
-        console.log("clicking");
         $('#boxHold').show();
         $('#boxHold').append('<div class="box"><img class="profile" src='+d.img+'></img><div class="personName"><a href="http://www.imdb.com/'+d.imdb+'" target="blank">' + d.name + '</a></div><div class="filmText">'+d.info+'</div></div>');
-        $('#hiddenLayer').show();
+        //$('#hiddenLayer').show();
         $('#close').show();
   })
       .attr("xlink:href", (function(d) { return d.img; }))
